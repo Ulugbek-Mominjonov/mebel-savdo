@@ -1,4 +1,4 @@
-# mebel-savdo
+# mebel_savdo
 
 ## Project setup
 ```
