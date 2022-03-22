@@ -2,19 +2,30 @@
   <header>
     <!-- header top  -->
     <v-container>
-      <v-row align="center">
-        <v-col cols="2">
-          <router-link to="#">
+      <v-row align="center" justify="space-between" class="site-nav-wrapper">
+        <v-col cols="4" lg="2" order="first" class="logo-wrapper">
+          <router-link to="#" class="link">
             <img src="../assets/logo.png" alt="Bu yerda logo rasmi" />
           </router-link>
         </v-col>
-        <v-col cols="4">
+        <v-col
+          cols="12"
+          sm="10"
+          md="7"
+          lg="4"
+          order="1"
+          class="mx-auto search-wrapperr"
+        >
           <div class="search-wrapper">
             <input class="search" type="text" v-model="search" />
             <v-icon class="search-icon">mdi-magnify</v-icon>
           </div>
         </v-col>
-        <v-col cols="2" class="">
+        <v-col
+          cols="2"
+          order="2"
+          class="d-none d-md-block social-media-wrapper"
+        >
           <div class="d-flex justify-space-around social-media">
             <router-link to="#" class="link">
               <v-icon>mdi-facebook</v-icon>
@@ -27,17 +38,29 @@
             </router-link>
           </div>
         </v-col>
-        <v-col cols="2" class="text-left email-date">
-          <p>
+        <v-col
+          cols="7"
+          lg="2"
+          order="0"
+          order-lg="3"
+          class="text-left email-date"
+        >
+          <p class="text-right">
             <v-icon color="red">mdi-clock</v-icon>
             <span>Пн-Пт, 9:00 до 18:00</span>
           </p>
-          <p>
+          <p class="text-right">
             <v-icon color="red">mdi-email</v-icon>
             <span>zakaz@mir-kovrolina.ru</span>
           </p>
         </v-col>
-        <v-col cols="2" class="registration text-right">
+        <v-col
+          cols="12"
+          sm="3"
+          lg="2"
+          order="4"
+          class="registration text-lg-right text-center d-none d-md-block"
+        >
           <button class="register-btn" @click="dialog = true">
             <span>Ro'yhatdan o'tish</span>
           </button>
@@ -105,9 +128,10 @@
 
     <!-- header botttom  -->
     <v-divider class="mt-5 mb-3"></v-divider>
-    <v-container>
+    <!-- desktop  -->
+    <v-container class="d-none d-md-block">
       <v-row align="center">
-        <v-col cols="11">
+        <v-col class="header-botoom-col" cols="11">
           <ul class="d-flex px-3 justify-space-between align-center nav_list">
             <li class="nav-link">
               <router-link class="link d-flex align-center" to="#">
@@ -138,15 +162,116 @@
             </li>
           </ul>
         </v-col>
-        <v-col cols="1">
-          <v-select
-            :items="languages"
-            v-model="language"
-          ></v-select>
+        <v-col class="header-botoom-col" cols="1">
+          <v-select :items="languages" v-model="language"></v-select>
+        </v-col>
+      </v-row>
+    </v-container>
+
+    <!-- mobile  -->
+    <v-container class="d-block d-md-none">
+      <v-row align="center">
+        <v-col cols="12" sm="6" class="text-center mobile">
+          <button class="register-btn d-block">
+            <span>Ro'yhatdan o'tish</span>
+          </button>
+        </v-col>
+        <v-col cols="12" sm="6" class="text-center mobile">
+          <button class="register-btn d-block" @click.stop="drawer = !drawer">
+            <v-icon class="mr-5">mdi-menu</v-icon>
+            <span>Menu</span>
+          </button>
         </v-col>
       </v-row>
     </v-container>
     <v-divider class="mt-3"></v-divider>
+
+    <!-- side bar -->
+    <v-navigation-drawer
+      v-model="drawer"
+      absolute
+      left
+      temporary
+      color="black"
+      dark
+      width="70%"
+      class="drawer"
+    >
+      <div class="close text-right">
+        <v-icon @click.stop="drawer = !drawer">mdi-close-thick</v-icon>
+      </div>
+      <v-list nav dense>
+        <v-list-item-group
+          v-model="group"
+          active-class="deep-purple--text text--accent-3"
+        >
+          <v-list-item>
+            <v-list-item-title>
+              <router-link class="link drawer-link d-flex align-center" to="#">
+                <v-icon class="mr-1" centered>mdi-menu</v-icon>
+                Katalog
+              </router-link>
+            </v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title>
+              <router-link class="link drawer-link" to="#"
+                >Xizmatlar</router-link
+              >
+            </v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title>
+              <router-link class="link drawer-link" to="#"
+                >Galereya</router-link
+              >
+            </v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title>
+              <router-link class="link drawer-link" to="#">Aksiya</router-link>
+            </v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title>
+              <router-link class="link drawer-link" to="#"
+                >Kompaniya haqida</router-link
+              >
+            </v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title>
+              <router-link class="link drawer-link" to="#">Kontakt</router-link>
+            </v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title>
+              <router-link class="link drawer-link d-flex align-center" to="#">
+                <v-icon class="mr-1">mdi-basket-plus</v-icon>
+                Korzinka
+              </router-link>
+            </v-list-item-title>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
+      <div class="d-flex justify-space-around social-media">
+        <router-link to="#" class="link">
+          <v-icon>mdi-facebook</v-icon>
+        </router-link>
+        <router-link to="#" class="link">
+          <v-icon>mdi-instagram</v-icon>
+        </router-link>
+        <router-link to="#" class="link">
+          <v-icon>mdi-whatsapp</v-icon>
+        </router-link>
+      </div>
+    </v-navigation-drawer>
   </header>
 </template>
 
@@ -164,7 +289,8 @@ export default {
     showPassword: false,
     showPassword2: false,
     language: "Uz",
-    languages: ['Uz', 'Eng', "Ru"]
+    languages: ["Uz", "Eng", "Ru"],
+    drawer: false,
   }),
   computed: {
     rules() {
@@ -253,6 +379,10 @@ export default {
     width: 100%;
   }
 }
+.header-botoom-col {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
 
 /* -------------------------------------------------------------------------- */
 /*                                  site nav                                  */
@@ -290,6 +420,26 @@ export default {
       opacity: 1;
       transform: translateY(0);
     }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              RESPONSIVE DESING                             */
+/* -------------------------------------------------------------------------- */
+.mobile .d-block {
+  width: 100%;
+}
+.drawer-link {
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+.drawer {
+  .social-media{
+    position: absolute;
+    width: 150px;
+    bottom: 30px;
   }
 }
 </style>

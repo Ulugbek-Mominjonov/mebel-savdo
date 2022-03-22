@@ -4,15 +4,18 @@
     <v-main>
       <router-view />
     </v-main>
+    <site-footer />
   </v-app>
 </template>
 
 <script>
 import SiteNav from '@/components/SiteNav.vue';
+import SiteFooter from '@/components/SiteFooter.vue';
 export default {
   name: "App",
   components: {
-    SiteNav
+    SiteNav,
+    SiteFooter
   },
 
   data: () => ({
@@ -72,6 +75,23 @@ body {
 .link {
   text-decoration: none;
 }
-
-
+.list-unstyle {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+}
+.link {
+  display: block;
+}
+footer {
+  display: none;
+}
+.v-navigation-drawer__content {
+  padding: 20px;
+}
 </style>
