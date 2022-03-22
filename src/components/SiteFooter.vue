@@ -1,8 +1,8 @@
 <template>
   <footer>
     <v-container>
-      <v-row>
-        <v-col cols="2" class="footer-menu">
+      <v-row justify="center" justify-sm="start">
+        <v-col cols="12" sm="6" md="4" lg="2" class="text-center text-sm-left footer-menu">
           <h4 class="footer-title">Menyu</h4>
           <ul class="list-unstyle footer-list">
             <li class="footer-item">
@@ -25,7 +25,7 @@
             </li>
           </ul>
         </v-col>
-        <v-col cols="2" class="footer-news">
+        <v-col cols="12" sm="6" md="4" lg="2" class="text-center text-sm-left footer-news">
           <h4 class="footer-title">Yangiliklar</h4>
           <ul class="list-unstyle footer-list">
             <li class="footer-item">
@@ -39,7 +39,7 @@
             </li>
           </ul>
         </v-col>
-        <v-col cols="3" class="footer-product">
+        <v-col cols="12" sm="6" md="4" lg="3" class="text-center text-sm-left footer-product">
           <h4 class="footer-title">Ishlab chiqaruvchi</h4>
           <ul class="list-unstyle footer-list">
             <li class="footer-item">
@@ -53,7 +53,7 @@
             </li>
           </ul>
         </v-col>
-        <v-col cols="2" class="footer-faq">
+        <v-col cols="12" sm="6" md="4" lg="2" class="text-center text-sm-left footer-faq">
           <h4 class="footer-title">Faq va xizmatlar</h4>
           <ul class="list-unstyle footer-list">
             <li class="footer-item">
@@ -70,7 +70,7 @@
             </li>
           </ul>
         </v-col>
-        <v-col cols="3" class="connect">
+        <v-col cols="12" sm="6" md="4" lg="3" class="text-center text-sm-left connect">
           <h4 class="footer-title">Bog'lanish</h4>
           <ul class="list-unstyle footer-list">
             <li class="footer-item">

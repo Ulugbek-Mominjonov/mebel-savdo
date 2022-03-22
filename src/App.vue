@@ -88,9 +88,7 @@ img {
 .link {
   display: block;
 }
-footer {
-  display: none;
-}
+
 .v-navigation-drawer__content {
   padding: 20px;
 }

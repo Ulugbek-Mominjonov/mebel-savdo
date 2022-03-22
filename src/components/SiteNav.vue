@@ -172,7 +172,7 @@
     <v-container class="d-block d-md-none">
       <v-row align="center">
         <v-col cols="12" sm="6" class="text-center mobile">
-          <button class="register-btn d-block">
+          <button class="register-btn d-block" @click="dialog = true">
             <span>Ro'yhatdan o'tish</span>
           </button>
         </v-col>
