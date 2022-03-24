@@ -84,6 +84,7 @@ body {
 }
 img {
   display: block;
+  // width: 100%;
 }
 .link {
   display: block;

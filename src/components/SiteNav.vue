@@ -291,6 +291,7 @@ export default {
     language: "Uz",
     languages: ["Uz", "Eng", "Ru"],
     drawer: false,
+    group: null
   }),
   computed: {
     rules() {
