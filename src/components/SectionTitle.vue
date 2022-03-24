@@ -16,7 +16,7 @@
 <style lang="scss" scoped>
   .section-title {
     font-weight: 700;
-    font-size: 40px;
+    font-size: 35px;
     line-height: 50px;
     color: #181818;
   }
