@@ -424,7 +424,7 @@ export default {
   .sale-img {
     position: absolute;
     top: 0;
-    right: -30px;
+    right: 0;
     z-index: 1;
   }
 }
