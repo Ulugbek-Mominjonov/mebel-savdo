@@ -145,7 +145,10 @@
         </v-col>
 
         <v-col
-          cols="3"
+          cols="12"
+          sm="6"
+          md="4"
+          lg="3"
           class="service"
           v-for="(item, index) in services"
           :key="index"
@@ -177,16 +180,62 @@
               active-class="success"
               show-arrows
             >
-              <v-slide-item
-                v-for="n in 15"
-                :key="n"
-              >
-                <img src="../assets/friend.png" alt="img">
+              <v-slide-item v-for="n in 15" :key="n">
+                <img src="../assets/friend.png" alt="img" />
               </v-slide-item>
             </v-slide-group>
           </v-sheet>
         </v-col>
       </v-row>
+    </v-container>
+
+    <!-- leave a request -->
+    <v-container class="request mb-15">
+      <v-row class="request-roc">
+        <v-col class="request-col" cols="12">
+          <h4 class="request-heading">So'rov qoldiring</h4>
+          <p class="request-info">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit,
+            enim?
+          </p>
+        </v-col>
+        <v-col class="request-field" cols="12" sm="10" md="9" lg="8">
+          <v-row class="request-field_row" align="center" justify="center">
+            <v-col cols="12" sm="6" class="input">
+              <v-text-field
+                label="Ism va Familiya"
+                outlined
+                dense
+                dark
+                color="red"
+              ></v-text-field>
+            </v-col>
+            <v-col cols="12" sm="6" class="input">
+              <v-text-field
+                label="Telefon nomer"
+                outlined
+                dense
+                dark
+                color="red"
+              ></v-text-field>
+            </v-col>
+            <v-col cols="12" class="input">
+              <v-textarea
+                outlined
+                name="input-7-4"
+                label="Savolingiz bormi?"
+                rows="3"
+                dark
+                color="red"
+              ></v-textarea>
+            </v-col>
+            <v-col cols="9" sm="6">
+              <v-btn color="red" dark width="100%">Jo'natish</v-btn>
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
+      <img class="sale-img" src="../assets/sale.png" alt="sale img" />
     </v-container>
   </div>
 </template>
@@ -208,7 +257,7 @@ export default {
         "Xizmat nomi",
         "Xizmat nomi",
       ],
-      model: null
+      model: null,
     };
   },
   methods: {
@@ -344,5 +393,89 @@ export default {
   }
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                   request                                  */
+/* -------------------------------------------------------------------------- */
+.request {
+  position: relative;
+  padding: 30px !important;
+  background: #181818;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
 
+  &-heading {
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+  }
+  &-info {
+    margin: 0;
+    width: 30%;
+  }
+  .input {
+    position: relative;
+    z-index: 2;
+  }
+  .sale-img {
+    position: absolute;
+    top: 0;
+    right: -30px;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .request {
+    &-heading {
+      position: relative;
+      z-index: 2;
+    }
+    &-info {
+      position: relative;
+      margin: 0;
+      width: 50%;
+      z-index: 2;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .request {
+    &-info {
+      position: relative;
+      width: 80%;
+    }
+    .sale-img {
+      width: 70%;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .request {
+    .sale-img {
+      top: 30%;
+      width: 80%;
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .request {
+    &-heading {
+      font-size: 32px;
+    }
+    &-info {
+      font-size: 16px;
+      width: 100%;
+    }
+    .sale-img {
+      width: 95%;
+    }
+  }
+}
 </style>

@@ -93,4 +93,8 @@ img {
 .v-navigation-drawer__content {
   padding: 20px;
 }
+
+.request .theme--dark.v-text-field--outlined:not(.v-input--is-focused):not(.v-input--has-state) > .v-input__control > .v-input__slot fieldset {
+  color: #fff;
+}
 </style>
