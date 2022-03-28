@@ -2,7 +2,7 @@
   <v-app>
     <site-nav />
     <v-main>
-      <router-view />
+    <router-view />
     </v-main>
     <site-footer />
   </v-app>
@@ -67,10 +67,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", "Arial", sans-serif;
-}
-.container {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
 }
 .link {
   text-decoration: none;

@@ -4,7 +4,7 @@
     <v-container>
       <v-row align="center" justify="space-between" class="site-nav-wrapper">
         <v-col cols="4" lg="2" order="first" class="logo-wrapper">
-          <router-link to="#" class="link">
+          <router-link to="/" class="link">
             <img src="../assets/logo.png" alt="Bu yerda logo rasmi" />
           </router-link>
         </v-col>
@@ -134,8 +134,8 @@
         <v-col class="header-botoom-col" cols="11">
           <ul class="d-flex px-3 justify-space-between align-center nav_list">
             <li class="nav-link">
-              <router-link class="link d-flex align-center" to="#">
-                <v-icon class="mr-1" centered>mdi-menu</v-icon>
+              <router-link class="link d-flex align-center" to="/about">
+                <v-icon class="mr-1 cat-icon" centered>mdi-menu</v-icon>
                 Katalog
               </router-link>
             </li>
@@ -207,7 +207,7 @@
         >
           <v-list-item>
             <v-list-item-title>
-              <router-link class="link drawer-link d-flex align-center" to="#">
+              <router-link class="link drawer-link d-flex align-center" to="about">
                 <v-icon class="mr-1" centered>mdi-menu</v-icon>
                 Katalog
               </router-link>
@@ -291,7 +291,7 @@ export default {
     language: "Uz",
     languages: ["Uz", "Eng", "Ru"],
     drawer: false,
-    group: null
+    group: null,
   }),
   computed: {
     rules() {
@@ -310,6 +310,10 @@ export default {
 /* -------------------------------------------------------------------------- */
 /*                                   HEADER                                   */
 /* -------------------------------------------------------------------------- */
+.container {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
 .search-wrapper {
   display: flex;
   padding: 8px 13px;
@@ -395,6 +399,13 @@ export default {
   list-style-type: none;
 }
 .nav-link {
+  .router-link-exact-active {
+    color: rgba(255, 0, 0, 0.7) !important;
+
+    .cat-icon {
+      color: rgba(255, 0, 0, 0.7);
+    }
+  }
   .link {
     display: block;
     position: relative;
@@ -437,7 +448,7 @@ export default {
   line-height: 19px;
 }
 .drawer {
-  .social-media{
+  .social-media {
     position: absolute;
     width: 150px;
     bottom: 30px;

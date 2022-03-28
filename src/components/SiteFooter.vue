@@ -96,6 +96,10 @@
 </script>
 
 <style lang="scss" scoped>
+.container {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
 footer {
   padding-top: 60px;
   padding-bottom: 60px;

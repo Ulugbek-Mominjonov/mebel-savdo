@@ -22,6 +22,10 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+.container {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
 .hero-wrapper {
   position: relative;
   padding-top: 120px;

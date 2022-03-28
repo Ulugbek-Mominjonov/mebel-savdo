@@ -271,6 +271,10 @@ export default {
 /* -------------------------------------------------------------------------- */
 /*                              POPULAR FURNITURE                             */
 /* -------------------------------------------------------------------------- */
+.container {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
 .popular-furniture {
   margin-bottom: 100px;
 }
